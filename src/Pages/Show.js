@@ -16,7 +16,7 @@ export default function Show() {
         setTransaction(res.data);
       })
       .catch((err) => navigate("/*"));
-  }, []);
+  }, [index]);
 
   function deleteTransaction() {
     axios
