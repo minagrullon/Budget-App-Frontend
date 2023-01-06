@@ -1,5 +1,11 @@
 import React from "react";
+import NewForm from "../Components/NewForm";
 
 export default function New() {
-  return <div>New</div>;
+  return (
+    <div>
+      <h2>New</h2>
+      <NewForm />
+    </div>
+  );
 }
