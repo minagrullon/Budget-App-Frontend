@@ -5,7 +5,6 @@ import axios from "axios";
 const API = process.env.REACT_APP_API_URL;
 
 export default function Transactions() {
-  const [total, setTotal] = useState(0);
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
@@ -13,24 +12,20 @@ export default function Transactions() {
       .get(`${API}/transactions`)
       .then((res) => {
         setTransactions(res.data);
-        setTotal(calculateTotal());
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [total]);
+  }, []);
 
-  function calculateTotal() {
-    let calc = transactions.reduce((acc, transaction) => {
-      if (transaction.category === "Income") {
-        acc += transaction.amount;
-      } else {
-        acc -= transaction.amount;
-      }
-      return acc;
-    }, 0);
-    return calc;
-  }
+  let total = transactions.reduce((acc, transaction) => {
+    if (transaction.category === "Income") {
+      acc += transaction.amount;
+    } else {
+      acc -= transaction.amount;
+    }
+    return acc;
+  }, 0);
 
   return (
     <div>
