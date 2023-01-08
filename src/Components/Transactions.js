@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "./Transactions.css";
 const API = process.env.REACT_APP_API_URL;
 
 export default function Transactions() {
@@ -20,40 +21,55 @@ export default function Transactions() {
 
   let total = transactions.reduce((acc, transaction) => {
     if (transaction.category === "Income") {
-      acc += transaction.amount;
+      acc += Number(transaction.amount);
     } else {
-      acc -= transaction.amount;
+      acc -= Number(transaction.amount);
     }
     return acc;
   }, 0);
 
   return (
-    <div>
+    <div className="transactions_index">
       <h2>Transactions</h2>
       <h3>Total in the bank: $ {total}</h3>
       <div className="transactions_list">
         <hr></hr>
-        {transactions.map((transaction, index) => {
-          return (
-            <div
-              className="transaction_item"
-              key={transaction.id}
-              style={{
-                border: "solid 1px black",
-                margin: "5px",
-                padding: "5px",
-              }}
-            >
-              <Link
-                to={`/transactions/${index}`}
-                style={{ textDecoration: "none" }}
-              >
-                <h4>{transaction.item_name}</h4>
-                <h5>${transaction.amount}</h5>
-              </Link>
-            </div>
-          );
-        })}
+        <table
+          className="transaction_item"
+          style={{
+            border: "solid 1px black",
+            margin: "5px",
+            padding: "5px",
+          }}
+        >
+          <tr>
+            <thead>
+              <th className="date">Date</th>
+              <th>Item</th>
+              <th className="amount">Amount</th>
+            </thead>
+          </tr>
+          {transactions.map((transaction, index) => {
+            return (
+              <>
+                <tbody key={transaction.id}>
+                  <tr>
+                    <td>{transaction.date}</td>
+                    <td className="item">
+                      <Link
+                        to={`/transactions/${index}`}
+                        style={{ textDecoration: "none" }}
+                      >
+                        {transaction.item_name}
+                      </Link>
+                    </td>
+                    <td>{transaction.amount}</td>
+                  </tr>
+                </tbody>
+              </>
+            );
+          })}
+        </table>
       </div>
     </div>
   );

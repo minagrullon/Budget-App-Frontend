@@ -1,0 +1,43 @@
+.new_page {
+  display: block;
+  /* justify-content: center;
+  align-items: center; */
+  height: 100vh;
+  /* background-image: url("https://images.barrons.com/im-338004?width=620&size=1.300990099009901");
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.new_form {
+  margin-top: 10px;
+  padding: 11px;
+  background-color: rgb(174, 231, 255);
+  display: grid;
+  grid-template-columns: min-content;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.back_button {
+  width: 30%;
+  padding: 6px;
+  background-color: rgb(213, 191, 229);
+  color: rgb(22, 11, 37);
+}
+
+.submit {
+  margin-top: 10px;
+  width: 30%;
+  padding: 6px;
+  background-color: rgb(246, 239, 146);
+}

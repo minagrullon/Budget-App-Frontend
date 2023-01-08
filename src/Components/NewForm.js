@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { v4 as uuid } from "uuid";
 const API = process.env.REACT_APP_API_URL;
 
 export default function NewForm() {
@@ -12,7 +13,7 @@ export default function NewForm() {
     date: "",
     from: "",
     category: "",
-    id: 0,
+    id: uuid(),
   });
 
   const handleTextChanges = (e) => {
@@ -44,6 +45,7 @@ export default function NewForm() {
             required
           ></input>
         </label>
+        <hr></hr>
         <label htmlFor="amount" className="item">
           Amount:{" "}
           <input
@@ -55,6 +57,7 @@ export default function NewForm() {
             onChange={handleTextChanges}
           ></input>
         </label>
+        <hr></hr>
         <label htmlFor="date" className="item">
           Date:{" "}
           <input
@@ -66,6 +69,7 @@ export default function NewForm() {
             onChange={handleTextChanges}
           ></input>
         </label>
+        <hr></hr>
         <label htmlFor="from" className="item">
           From:{" "}
           <input
@@ -77,6 +81,7 @@ export default function NewForm() {
             onChange={handleTextChanges}
           ></input>
         </label>
+        <hr></hr>
         <label htmlFor="category" className="item">
           Category:{" "}
           <input
@@ -88,11 +93,14 @@ export default function NewForm() {
             onChange={handleTextChanges}
           ></input>
         </label>
+
         <button type="submit" className="submit">
           Save
         </button>
       </form>
-      <button onClick={() => navigate("/transactions")}>Back</button>
+      <button className="back_button" onClick={() => navigate("/transactions")}>
+        Back
+      </button>
     </div>
   );
 }

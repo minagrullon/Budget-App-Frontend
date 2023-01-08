@@ -1,0 +1,14 @@
+.home {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: whitesmoke;
+  background-image: url("https://cdn.dribbble.com/users/844597/screenshots/5895763/media/bfecc3ab0f6a2c509d5e2d80549b7e21.gif");
+  background-size: cover;
+  background-position: center;
+  font-size: larger;
+  font-weight: bold;
+  color: rgb(65, 73, 119);
+}

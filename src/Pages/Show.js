@@ -27,6 +27,7 @@ export default function Show() {
       .catch((err) => console.log(err));
   }
 
+  console.log(transaction);
   return (
     <div>
       <h2>Show</h2>
