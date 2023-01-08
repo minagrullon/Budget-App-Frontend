@@ -5,10 +5,11 @@
   align-items: center;
   height: 100vh;
   background-color: whitesmoke;
-  background-image: url("https://cdn.dribbble.com/users/844597/screenshots/5895763/media/bfecc3ab0f6a2c509d5e2d80549b7e21.gif");
-  background-size: cover;
+  /* background-image: url("https://cdn.dribbble.com/users/844597/screenshots/5895763/media/bfecc3ab0f6a2c509d5e2d80549b7e21.gif"); */
+  background-image: url("https://thumbs.gfycat.com/PaltryRichAmphiuma-max-1mb.gif");
+  background-size: fit;
   background-position: center;
   font-size: larger;
   font-weight: bold;
-  color: rgb(65, 73, 119);
+  color: rgb(20, 24, 50);
 }
