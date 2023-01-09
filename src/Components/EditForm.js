@@ -21,6 +21,20 @@ export default function EditForm() {
     setTransaction({ ...transaction, [e.target.id]: e.target.value });
   };
 
+  const options = [
+    "Income",
+    "Taxes",
+    "Rent",
+    "Food",
+    "Pet",
+    "Clothing",
+    "Furniture",
+    "Home",
+    "Medical",
+    "Transportation",
+    "Insurance",
+  ];
+
   useEffect(() => {
     axios
       .get(`${API}/transactions/${index}`)
@@ -91,14 +105,24 @@ export default function EditForm() {
         <hr></hr>
         <label htmlFor="category" className="item">
           Category:{" "}
-          <input
+          <select>
+            <option value="" id="">
+              Select...
+            </option>
+            {options.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+          {/* <input
             type="text"
             id="category"
             name="category"
             value={transaction.category}
             required
             onChange={handleTextChanges}
-          ></input>
+          ></input> */}
         </label>
         <button type="submit" className="submit">
           Save

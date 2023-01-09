@@ -1,0 +1,19 @@
+.error {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+  width: 100%;
+  background-color: #fcecec;
+  /* background-image: url("https://cdn.dribbble.com/users/1138875/screenshots/4669703/media/c25729131efb71198034c0275c21aea8.gif"); */
+  background-image: url("https://media.giphy.com/avatars/404academy/kGwR3uDrUKPI.gif");
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.error h2 {
+  font-size: 3rem;
+  color: rgb(238, 85, 85);
+}

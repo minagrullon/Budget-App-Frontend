@@ -9,11 +9,11 @@ export default function NavBar() {
         Home{" "}
       </Link>
       <Link className="nav_link" to="/transactions">
-        Transactions
+        <h3>Transactions</h3>
       </Link>
       <button className="new_button">
         <Link className="nav_link" to="/transactions/new">
-          New
+          New Transaction
         </Link>
       </button>
     </div>
