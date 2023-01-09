@@ -21,19 +21,19 @@ export default function EditForm() {
     setTransaction({ ...transaction, [e.target.id]: e.target.value });
   };
 
-  const options = [
-    "Income",
-    "Taxes",
-    "Rent",
-    "Food",
-    "Pet",
-    "Clothing",
-    "Furniture",
-    "Home",
-    "Medical",
-    "Transportation",
-    "Insurance",
-  ];
+  //   const options = [
+  //     "Income",
+  //     "Taxes",
+  //     "Rent",
+  //     "Food",
+  //     "Pet",
+  //     "Clothing",
+  //     "Furniture",
+  //     "Home",
+  //     "Medical",
+  //     "Transportation",
+  //     "Insurance",
+  //   ];
 
   useEffect(() => {
     axios
@@ -46,7 +46,7 @@ export default function EditForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`API/transactions/${index}`, transaction).then((res) => {
+    axios.put(`${API}/transactions/${index}`, transaction).then((res) => {
       setTransaction(res.data);
       navigate(`/transactions/${index}`).catch((err) => console.log(err));
     });
@@ -105,16 +105,36 @@ export default function EditForm() {
         <hr></hr>
         <label htmlFor="category" className="item">
           Category:{" "}
-          <select>
+          <select
+            onChange={handleTextChanges}
+            id="category"
+            value={transaction.category}
+          >
             <option value="" id="">
               Select...
             </option>
-            {options.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
+
+            <option value="Rent">Rent</option>
+
+            <option value="Income">Income</option>
+
+            <option value="Food">Food</option>
+
+            <option value="Furniture">Furniture</option>
+
+            <option value="Clothes">Clothes</option>
+
+            <option value="Pets">Pets</option>
+
+            <option value="Insurance">Insurance</option>
+
+            <option value="Medical">Medical</option>
+
+            <option value="Taxes">Taxes</option>
+
+            <option value="Leisure">Leisure</option>
           </select>
+          {console.log(transaction.category)}
           {/* <input
             type="text"
             id="category"
