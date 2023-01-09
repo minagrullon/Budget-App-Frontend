@@ -1,0 +1,36 @@
+.edit_page {
+  padding: 12px;
+  display: block;
+  background-color: rgb(215, 215, 220);
+}
+
+.edit_form {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 35px;
+  background-color: rgb(246, 244, 237);
+  display: grid;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 60%;
+  height: 50%;
+  border-radius: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.submit:hover {
+  cursor: pointer;
+  background-color: rgb(245, 216, 102);
+}
+
+.back_button:hover {
+  cursor: pointer;
+  background-color: rgb(31, 30, 27);
+  color: white;
+}

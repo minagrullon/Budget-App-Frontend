@@ -52,6 +52,7 @@ export default function EditForm() {
             required
           ></input>
         </label>
+        <hr></hr>
         <label htmlFor="amount" className="item">
           Amount:{" "}
           <input
@@ -63,6 +64,7 @@ export default function EditForm() {
             onChange={handleTextChanges}
           ></input>
         </label>
+        <hr></hr>
         <label htmlFor="date" className="item">
           Date:{" "}
           <input
@@ -74,6 +76,7 @@ export default function EditForm() {
             onChange={handleTextChanges}
           ></input>
         </label>
+        <hr></hr>
         <label htmlFor="from" className="item">
           From:{" "}
           <input
@@ -85,6 +88,7 @@ export default function EditForm() {
             onChange={handleTextChanges}
           ></input>
         </label>
+        <hr></hr>
         <label htmlFor="category" className="item">
           Category:{" "}
           <input

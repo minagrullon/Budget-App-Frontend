@@ -1,5 +1,6 @@
 import React from "react";
 import EditForm from "../Components/EditForm";
+import "./Edit.css";
 
 export default function Edit() {
   return (
