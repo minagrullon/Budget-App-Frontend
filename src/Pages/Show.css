@@ -1,0 +1,43 @@
+.show_page h2 {
+  margin-left: 10px;
+}
+
+.transaction_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 75%;
+  border: 2px solid rgb(181, 180, 180);
+  background-color: rgb(228, 235, 236);
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: larger;
+}
+
+.show_page_buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.show_page_buttons button {
+  padding: 10px;
+  border-radius: 14px;
+  width: 80px;
+
+  border: 2px solid rgb(181, 180, 180);
+  background-color: rgb(57, 44, 34);
+  color: white;
+}
+
+.show_page_buttons button:hover {
+  background-color: rgb(143, 115, 94);
+  color: white;
+}

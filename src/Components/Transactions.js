@@ -28,13 +28,15 @@ export default function Transactions() {
     return acc;
   }, 0);
 
+  let sorted = transactions.sort((a, b) => a.date - b.date);
+
   return (
     <div className="transactions_index">
       <h2>Transactions</h2>
       <h3>Total in the bank: $ {total}</h3>
       <div className="transactions_list">
         <hr></hr>
-        <table
+        <div
           className="transaction_item"
           style={{
             border: "solid 1px black",
@@ -42,14 +44,30 @@ export default function Transactions() {
             padding: "5px",
           }}
         >
-          <tr>
-            <thead>
-              <th className="date">Date</th>
-              <th>Item</th>
-              <th className="amount">Amount</th>
-            </thead>
-          </tr>
-          {transactions.map((transaction, index) => {
+          <div className="headers">
+            <h3 className="date">Date</h3>
+            <h3>Item</h3>
+            <h3 className="amount">Amount</h3>
+          </div>
+          {transactions
+            .map((transaction, index) => {
+              return (
+                <div className="details" key={transaction.id}>
+                  <h5>{transaction.date}</h5>
+                  <h4 className="item">
+                    <Link
+                      to={`/transactions/${index}`}
+                      style={{ textDecoration: "none" }}
+                    >
+                      {transaction.item_name}
+                    </Link>
+                  </h4>
+                  <h5>$ {transaction.amount}</h5>
+                </div>
+              );
+            })
+            .sort((a, b) => a.date - b.date)}
+          {/* {sorted.map((transaction, index) => {
             return (
               <>
                 <tbody key={transaction.id}>
@@ -68,8 +86,8 @@ export default function Transactions() {
                 </tbody>
               </>
             );
-          })}
-        </table>
+          })} */}
+        </div>
       </div>
     </div>
   );

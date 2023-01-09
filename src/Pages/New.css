@@ -1,5 +1,6 @@
 .new_page {
   display: block;
+  background-color: rgb(174, 174, 178);
   /* justify-content: center;
   align-items: center; */
   height: 100vh;
@@ -8,17 +9,21 @@
   background-size: cover; */
 }
 
+.new_page h2 {
+  color: white;
+  padding: 10px;
+}
 .new_form {
   margin-top: 10px;
-  padding: 11px;
-  background-color: rgb(174, 231, 255);
+  margin-left: 10px;
+  padding: 35px;
+  background-color: rgb(246, 244, 237);
   display: grid;
-  grid-template-columns: min-content;
+
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
+
+  width: 60%;
   height: 50%;
   border-radius: 10px;
 }
@@ -29,15 +34,22 @@ input {
 }
 
 .back_button {
-  width: 30%;
-  padding: 6px;
-  background-color: rgb(213, 191, 229);
+  width: 8%;
+  height: 36px;
+  /* padding: 6px; */
+  background-color: rgb(208, 207, 209);
   color: rgb(22, 11, 37);
+  margin-top: 10px;
 }
 
 .submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 10px;
-  width: 30%;
+  width: 8%;
+  height: 36px;
   padding: 6px;
-  background-color: rgb(246, 239, 146);
+  background-color: rgb(240, 237, 199);
+  position: relative;
 }

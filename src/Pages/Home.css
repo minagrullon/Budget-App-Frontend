@@ -1,15 +1,25 @@
 .home {
-  margin: 5px;
+  margin-top: 0;
   display: flex;
-  justify-content: center;
+
   align-items: center;
   height: 100vh;
   background-color: whitesmoke;
   /* background-image: url("https://cdn.dribbble.com/users/844597/screenshots/5895763/media/bfecc3ab0f6a2c509d5e2d80549b7e21.gif"); */
-  background-image: url("https://thumbs.gfycat.com/PaltryRichAmphiuma-max-1mb.gif");
-  background-size: fit;
+  /* background-image: url("https://thumbs.gfycat.com/PaltryRichAmphiuma-max-1mb.gif"); */
+  /* background-image: url("https://www.mysuretybank.com/wp-content/uploads/2019/08/3-Checking-Hero.gif"); */
+  background-image: url("https://www.pollenmidwest.org/wp-content/uploads/2017/04/banking2.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  font-size: larger;
+
+  font-size: 2em;
   font-weight: bold;
-  color: rgb(20, 24, 50);
+  color: rgb(23, 71, 68);
+  text-shadow: 4px 4px 4px solid rgb(233, 233, 17);
+}
+
+.home h2 {
+  padding: 10px;
+  margin-right: 10px;
 }
