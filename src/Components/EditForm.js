@@ -46,10 +46,13 @@ export default function EditForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`${API}/transactions/${index}`, transaction).then((res) => {
-      setTransaction(res.data);
-      navigate(`/transactions/${index}`).catch((err) => console.log(err));
-    });
+    axios
+      .put(`${API}/transactions/${index}`, transaction)
+      .then((res) => {
+        setTransaction(res.data);
+        navigate(`/transactions/${index}`);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
