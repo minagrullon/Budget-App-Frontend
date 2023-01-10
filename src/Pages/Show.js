@@ -28,7 +28,7 @@ export default function Show() {
       .catch((err) => console.log(err));
   }
 
-  console.log(transaction);
+  //   console.log(transaction);
   return (
     <div className="show_page">
       <h2>Show</h2>
@@ -36,7 +36,7 @@ export default function Show() {
         <h3>Transaction Name: {transaction.item_name}</h3>
         <h4>Amount: ${transaction.amount}</h4>
         <h5>Date: {transaction.date}</h5>
-        <h5>From: {transaction.from}</h5>
+        <h5>From:{transaction.from}</h5>
       </div>
       <div className="show_page_buttons">
         <button onClick={() => navigate("/transactions")}>Back</button>

@@ -1,3 +1,9 @@
+Backend Repo: https://github.com/minagrullon/Budget-App-backend
+
+Deployed Backend: https://budget-app-backend-xxxb.onrender.com
+
+Deployed Frontend: https://delicate-marzipan-202f89.netlify.app
+
 User Stories
 
 (1) Navigation/Nav Bar

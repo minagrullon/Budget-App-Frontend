@@ -7,6 +7,7 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function Transactions() {
   const [transactions, setTransactions] = useState([]);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,7 +19,7 @@ export default function Transactions() {
       .catch((err) => {
         console.log(err);
       });
-  }, [transactions]);
+  }, []);
 
   let total = transactions.reduce((acc, transaction) => {
     if (transaction.category === "Income") {
@@ -29,7 +30,9 @@ export default function Transactions() {
     return acc;
   }, 0);
 
-  let sorted = transactions.sort((a, b) => a.date - b.date);
+  //   let sorted = transactions.sort(function (a, b) {
+  //     return new Date(b.date) - new Date(a.date);
+  //   });
 
   return (
     <div className="transactions_index">
@@ -77,26 +80,6 @@ export default function Transactions() {
               </div>
             );
           })}
-          {/* {sorted.map((transaction, index) => {
-            return (
-              <>
-                <tbody key={transaction.id}>
-                  <tr>
-                    <td>{transaction.date}</td>
-                    <td className="item">
-                      <Link
-                        to={`/transactions/${index}`}
-                        style={{ textDecoration: "none" }}
-                      >
-                        {transaction.item_name}
-                      </Link>
-                    </td>
-                    <td>{transaction.amount}</td>
-                  </tr>
-                </tbody>
-              </>
-            );
-          })} */}
         </div>
       </div>
     </div>
