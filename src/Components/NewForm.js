@@ -84,14 +84,43 @@ export default function NewForm() {
         <hr></hr>
         <label htmlFor="category" className="item">
           Category:{" "}
-          <input
+          <select
+            onChange={handleTextChanges}
+            id="category"
+            value={transaction.category}
+          >
+            <option value="" id="">
+              Select...
+            </option>
+
+            <option value="Rent">Rent</option>
+
+            <option value="Income">Income</option>
+
+            <option value="Food">Food</option>
+
+            <option value="Furniture">Furniture</option>
+
+            <option value="Clothes">Clothes</option>
+
+            <option value="Pets">Pets</option>
+
+            <option value="Insurance">Insurance</option>
+
+            <option value="Medical">Medical</option>
+
+            <option value="Taxes">Taxes</option>
+
+            <option value="Leisure">Leisure</option>
+          </select>
+          {/* <input
             type="text"
             id="category"
             name="category"
             value={transaction.category}
             required
             onChange={handleTextChanges}
-          ></input>
+          ></input> */}
         </label>
 
         <button type="submit" className="submit">

@@ -123,15 +123,6 @@ export default function EditForm() {
 
             <option value="Leisure">Leisure</option>
           </select>
-          {console.log(transaction.category)}
-          {/* <input
-            type="text"
-            id="category"
-            name="category"
-            value={transaction.category}
-            required
-            onChange={handleTextChanges}
-          ></input> */}
         </label>
         <button type="submit" className="submit">
           Save
