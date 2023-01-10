@@ -45,3 +45,13 @@
 
   box-shadow: 0 5px 15px rgba(223, 232, 146, 0.4);
 }
+
+@media (max-width: 980px) {
+  .nav_link {
+    font-size: medium;
+  }
+
+  .new_button {
+    width: 74%;
+  }
+}

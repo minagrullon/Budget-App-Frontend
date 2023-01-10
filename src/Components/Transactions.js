@@ -59,14 +59,12 @@ export default function Transactions() {
             return (
               <div className="details" key={transaction.id}>
                 <h4>{transaction.date}</h4>
-                <h4 className="item">
-                  <Link
-                    to={`/transactions/${index}`}
-                    style={{ textDecoration: "none", color: "brown" }}
-                  >
-                    {transaction.item_name}
-                  </Link>
-                </h4>
+                <Link
+                  to={`/transactions/${index}`}
+                  style={{ textDecoration: "none", color: "brown" }}
+                >
+                  <h4 className="item">{transaction.item_name}</h4>
+                </Link>
                 <h4>$ {transaction.amount}</h4>
                 <div className="buttons">
                   <Link

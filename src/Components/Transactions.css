@@ -12,10 +12,10 @@
 
 .transaction_item {
   background-color: rgb(117, 112, 117);
-  border-collapse: collapse;
-  width: 96vw;
-  margin-top: 10px;
-  margin: 6px;
+
+  /* margin-top: 10px; */
+  margin: 300px;
+  border-radius: 10px;
 }
 
 .headers {
@@ -25,6 +25,11 @@
   text-align: center;
   align-items: center;
   color: white;
+}
+
+.item:hover {
+  letter-spacing: 1.7px;
+  color: rgb(29, 108, 97);
 }
 
 .details {
@@ -37,24 +42,19 @@
   text-align: center;
   color: rgb(56, 48, 48);
   background-color: rgb(228, 235, 236);
+  margin: 8px;
 }
-
-/* .date {
-  margin-left: 10px;
-}
-
-.amount {
-  margin-right: 10px;
-} */
 
 .index_page {
   margin: 8px;
 }
 
-.delete_onIndex {
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: brown;
-  font-size: medium;
+.index_page h3 {
+  margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+  .transaction_item {
+    background-color: rgb(122, 110, 122);
+  }
 }

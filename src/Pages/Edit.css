@@ -34,3 +34,13 @@ input {
   background-color: rgb(31, 30, 27);
   color: white;
 }
+
+@media (max-width: 850px) {
+  .submit {
+    width: 25%;
+  }
+
+  .back_button {
+    width: 25%;
+  }
+}

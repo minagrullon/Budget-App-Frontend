@@ -124,6 +124,7 @@ export default function EditForm() {
             <option value="Leisure">Leisure</option>
           </select>
         </label>
+
         <button type="submit" className="submit">
           Save
         </button>
