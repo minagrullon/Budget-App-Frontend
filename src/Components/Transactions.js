@@ -34,7 +34,12 @@ export default function Transactions() {
   return (
     <div className="transactions_index">
       <h2>Transactions</h2>
-      <h3>Total in the bank: $ {total}</h3>
+      <h3>Total in the bank: </h3>
+      <h3
+        style={{ color: total >= 1000 ? "green" : total >= 1 ? "grey" : "red" }}
+      >
+        $ {total}
+      </h3>
       <div className="transactions_list">
         <hr></hr>
         <div

@@ -22,4 +22,5 @@
 .home h2 {
   padding: 10px;
   margin-right: 10px;
+  transition: opacity 1s ease;
 }

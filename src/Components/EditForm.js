@@ -21,20 +21,6 @@ export default function EditForm() {
     setTransaction({ ...transaction, [e.target.id]: e.target.value });
   };
 
-  //   const options = [
-  //     "Income",
-  //     "Taxes",
-  //     "Rent",
-  //     "Food",
-  //     "Pet",
-  //     "Clothing",
-  //     "Furniture",
-  //     "Home",
-  //     "Medical",
-  //     "Transportation",
-  //     "Insurance",
-  //   ];
-
   useEffect(() => {
     axios
       .get(`${API}/transactions/${index}`)
