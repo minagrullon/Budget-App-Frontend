@@ -113,14 +113,6 @@ export default function NewForm() {
 
             <option value="Leisure">Leisure</option>
           </select>
-          {/* <input
-            type="text"
-            id="category"
-            name="category"
-            value={transaction.category}
-            required
-            onChange={handleTextChanges}
-          ></input> */}
         </label>
 
         <button type="submit" className="submit">
