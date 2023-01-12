@@ -16,6 +16,7 @@ export default function NewForm() {
     id: uuid(),
   });
 
+  console.log(transaction.id);
   const handleTextChanges = (e) => {
     setTransaction({
       ...transaction,
@@ -27,7 +28,7 @@ export default function NewForm() {
     e.preventDefault();
     axios
       .post(`${API}/transactions`, transaction)
-      .then((res) => {
+      .then(() => {
         navigate("/transactions");
       })
       .catch((err) => console.log(err));

@@ -1,8 +1,8 @@
 Backend Repo: https://github.com/minagrullon/Budget-App-backend
 
-Deployed Backend: https://budget-app-backend-xxxb.onrender.com
+Deployed Backend: https://budget-app-backend-o378.onrender.com
 
-Deployed Frontend: https://delicate-marzipan-202f89.netlify.app
+Deployed Frontend: https://fantastic-cranachan-6aa34c.netlify.app/
 
 User Stories
 

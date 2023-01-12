@@ -30,9 +30,9 @@ export default function Transactions() {
     return acc;
   }, 0);
 
-  //   let sorted = transactions.sort(function (a, b) {
-  //     return new Date(b.date) - new Date(a.date);
-  //   });
+  // let sorted = transactions.sort(function (a, b) {
+  //   return new Date(b.date) - new Date(a.date);
+  // });
 
   return (
     <div className="transactions_index">
